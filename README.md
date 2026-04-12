@@ -1,6 +1,18 @@
 # Sidekiq
 
-Ruby background job processor with Redis and Sinatra API.
+[![Maintained by StackBlaze](https://img.shields.io/badge/maintained%20by-StackBlaze-blue)](https://stackblaze.com)
+[![Weekly Updates](https://img.shields.io/badge/updates-weekly-green)](https://github.com/stackblaze-templates/sidekiq/actions)
+[![License](https://img.shields.io/github/license/stackblaze-templates/sidekiq)](LICENSE)
+
+A simple and efficient background job processor for Ruby. Uses Redis for storage. Includes Sinatra API + Sidekiq worker.
+
+> **Credits**: Built on [Sidekiq](https://sidekiq.org) by [Mike Perham](https://github.com/sidekiq). All trademarks belong to their respective owners.
+
+## Deploy on StackBlaze
+
+[![Deploy on StackBlaze](https://img.shields.io/badge/Deploy%20on-StackBlaze-orange)](https://stackblaze.com)
+
+This template includes a `stackblaze.yaml` for one-click deployment on [StackBlaze](https://stackblaze.com).
 
 ## Local Development
 
@@ -8,13 +20,16 @@ Ruby background job processor with Redis and Sinatra API.
 docker compose up
 ```
 
-- API: `http://localhost:9292`
-- Trigger a job: `GET /job`
+See the project files for configuration details.
 
-## Adding Workers
+---
 
-Define workers in `workers/`. See `workers/sample_worker.rb` for an example.
+### Maintained by [StackBlaze](https://stackblaze.com)
 
-## Deploy on StackBlaze
+This template is actively maintained by StackBlaze. We perform **weekly automated checks** to ensure:
 
-This template includes a `stackblaze.yaml` for deployment.
+- **Up-to-date dependencies** — frameworks, libraries, and base images are kept current
+- **Security scanning** — continuous monitoring for known vulnerabilities and CVEs
+- **Best practices** — configurations follow current recommendations from upstream projects
+
+Found an issue? [Open a ticket](https://github.com/stackblaze-templates/sidekiq/issues).
