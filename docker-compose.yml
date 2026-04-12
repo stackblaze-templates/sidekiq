@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "9292:9292"
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+  worker:
+    build: .
+    command: bundle exec sidekiq -r ./workers/sample_worker.rb
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+  redis:
+    image: redis:7-alpine

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sidekiq-app
+    runtime: ruby
+    plan: starter
+    buildCommand: bundle install
+    startCommand: bundle exec rackup -p $PORT -o 0.0.0.0
+    autoDeploy: false
+    envVars:
+      - key: REDIS_URL
+        value: redis://redis:6379/0
