@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem "sidekiq", "~> 7.3"
+gem "sidekiq", "~> 8.1"
 gem "sinatra", "~> 4.1"
 gem "rackup"
 gem "puma"
